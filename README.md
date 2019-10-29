@@ -50,7 +50,7 @@ Not providing a quota, rounds the seats down before ordering by the largest rema
 - `type` the quota used
 - `party` the original key name
 - `votes` the original key value
-- `percentage` the overall percentage of votes recieved
+- `percentage` the overall percentage of votes received
 - `distribution` how the seats _should_ be distributed
 - `remainder` the remainder used to order the results before addition of new seats
 - `seats` the seats allocated to the party
