@@ -1,0 +1,13 @@
+{
+	"name": "largest-remainder",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "node test.js"
+	},
+	"type": "module",
+	"author": "Nic Mulvaney",
+	"license": "MIT",
+	"type": "module",
+	"dependencies": {}
+}
