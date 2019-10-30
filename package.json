@@ -2,12 +2,27 @@
 	"name": "largest-remainder",
 	"version": "1.0.0",
 	"main": "index.js",
+	"keywords": [
+		"largest remainder",
+		"proportional representation",
+		"proportional distribution",
+		"apportionment",
+		"representative assemblies",
+		"voting system",
+		"politics",
+		"hare–niemeyer",
+		"hamilton",
+		"vinton",
+		"hare",
+		"droop",
+		"hagenbach-bischoff",
+		"imperiali"
+	],
 	"scripts": {
 		"test": "node test.js"
 	},
 	"type": "module",
 	"author": "Nic Mulvaney",
 	"license": "MIT",
-	"type": "module",
-	"dependencies": {}
+	"type": "module"
 }
