@@ -1,17 +1,19 @@
 const largestRemainder = require('./index')
 
 const votes = {
-	Socialists: 1307550,
-	Conservatives: 109068,
-	Liberals: 86403,
-	Greens: 35069,
-	'Rent Is Too Damn High': 12340
+	Conservatives: 13636684,
+	Labour: 12877918,
+	SNP: 977568,
+	'Liberal Democrats': 2371861,
+	Green: 525665,
+	Other: 746144
 }
+const seats = 650
 
-let governmentHare = largestRemainder(votes, 420, 'hare')
-let governmentDroop = largestRemainder(votes, 420, 'droop')
-let governmentHB = largestRemainder(votes, 420, 'hagenbach-bischoff')
-let governmentImperiali = largestRemainder(votes, 420, 'imperiali')
+let governmentHare = largestRemainder(votes, seats, 'hare')
+let governmentDroop = largestRemainder(votes, seats, 'droop')
+let governmentHB = largestRemainder(votes, seats, 'hagenbach-bischoff')
+let governmentImperiali = largestRemainder(votes, seats, 'imperiali')
 
 console.table(governmentHare)
 console.table(governmentDroop)
