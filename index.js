@@ -7,12 +7,6 @@ const totalObj = (obj, key) => {
 	)
 }
 
-const fixed = (num, fixed) => {
-	var re = new RegExp('^-?\\d+(?:.\\d{0,' + (fixed || -1) + '})?')
-	let m = num.toString().match(re)
-	return parseFloat(m ? m[0] : 0)
-}
-
 const largestRemainder = (input, totalSeats, type) => {
 	if (!Object.keys(input).length) {
 		console.error('Empty input for proportional-distribution')
@@ -29,12 +23,13 @@ const largestRemainder = (input, totalSeats, type) => {
 	// choose a quota
 	let quota
 
-	if (type === 'hare') {
-		quota = total / totalSeats
-	}
-
 	if (type === 'droop') {
-		quota = 1 + total / (1 + totalSeats)
+		quota = Math.floor(total / (totalSeats + 1)) + 1
+	}
+	let tooLow = quota <= totalSeats
+
+	if (type === 'hare' || tooLow) {
+		quota = total / totalSeats
 	}
 
 	if (type === 'hagenbach-bischoff') {
@@ -44,6 +39,10 @@ const largestRemainder = (input, totalSeats, type) => {
 	if (type === 'imperiali') {
 		quota = total / (2 + totalSeats)
 	}
+
+	if (tooLow) {
+		type = 'hare (was droop)'
+	}
 	// For each party create an analysis object
 	for (var i in input) {
 		let votes = parseFloat(input[i])
@@ -52,7 +51,7 @@ const largestRemainder = (input, totalSeats, type) => {
 		let seats, remainder
 		if (type) {
 			let seatsFloat = votes / quota
-			seats = fixed(seatsFloat, 0)
+			seats = Math.floor(seatsFloat)
 			remainder = seatsFloat - seats
 		} else {
 			seats = Math.floor(distribution)

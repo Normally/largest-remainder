@@ -48,6 +48,8 @@ Available quotas are `hare`, `droop`, `hagenbach-bischoff` and `imperiali`. See 
 
 Not providing a quota, rounds the seats down before ordering by the largest remainder and incrementally increasing.
 
+`droop` quota defaults to `hare` quota when `quota <= seats`
+
 ## Results object
 
 - `type` the quota used

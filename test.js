@@ -8,6 +8,7 @@ const votes = {
 	Green: 525665,
 	Other: 746144
 }
+
 const seats = 650
 
 let governmentHare = largestRemainder(votes, seats, 'hare')

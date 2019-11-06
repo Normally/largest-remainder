@@ -1,10 +1,11 @@
 {
 	"name": "largest-remainder",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"main": "index.js",
 	"keywords": [
 		"voting",
 		"election",
+		"general election",
 		"largest remainder",
 		"proportional representation",
 		"representation",
@@ -30,5 +31,6 @@
 	"type": "module",
 	"author": "Nic Mulvaney",
 	"license": "MIT",
-	"type": "module"
+	"type": "module",
+	"repository": "github:normally/largest-remainder"
 }
